@@ -1,0 +1,45 @@
+name: "Collaborate on Mimi / 参与秘秘"
+description: "Share an idea, experience, or a concrete way you'd like to contribute. / 介绍你想参与的方向。"
+title: "[Collaboration] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in Mimi. This is a public collaboration inquiry, **not** an automatic organization invitation.
+        
+        感谢你关注秘秘。这里收集公开协作意向，并不自动授予 GitHub 组织成员身份或私有仓库权限。请勿公开提交邮箱、电话号码、访问令牌等敏感信息。
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Area / 参与方向"
+      options:
+        - "Product and interaction / 产品与交互"
+        - "Agent engineering and integrations / Agent 工程与集成"
+        - "Reliability, evaluation and security / 可靠性、评测与安全"
+        - "Governance and research / 治理与研究"
+        - "Documentation and community / 文档与社区"
+        - "Other / 其他"
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: "What would you like to work on? / 你希望一起做什么？"
+      description: "A concrete problem, idea, or proposed contribution is more useful than a résumé. / 描述一个具体问题、设想或贡献即可。"
+      placeholder: "I'd like to help with… / 我希望参与……"
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: "Relevant context (optional) / 相关经验或链接（选填）"
+      description: "Public GitHub projects, prototypes, or writing are welcome. / 可以分享公开项目、原型或文章。"
+    validations:
+      required: false
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: "Before submitting / 提交前"
+      options:
+        - label: "I understand this is a public issue, not a request that automatically grants access. / 我理解这是公开 Issue，不会自动获得访问权限。"
+          required: true
